@@ -34,8 +34,8 @@ class Clients extends Component {
             </thead>
             <tbody>
               {clients.map(client => (
-                <tr>
-                  <th>{client.id}</th>
+                <tr key = {client.id}>
+                  <td>{client.id}</td>
                   <td>
                     {client.firstName} {client.lastName}
                   </td>
