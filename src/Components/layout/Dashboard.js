@@ -6,10 +6,10 @@ export default () => {
     return (
         <div>
             <div className = "row">
-                <div className ="col-md-10">
+                <div className ="col-md-11">
                     <Clients /> 
                 </div> 
-                <div className ="col-md-2">
+                <div className ="col-md-1">
                     <SideBar /> 
                 </div> 
             </div>

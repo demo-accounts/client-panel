@@ -22,7 +22,10 @@ const rrfConfig = {
 //Init firebase instance
 firebase.initializeApp(firebaseConfig);
 //Init firestore
-firebase.firestore();
+const firestore = firebase.firestore();
+//to get rid of that error in the console : next 2 lines 
+const settings = {timestampsInSnapshots: true}
+firestore.settings(settings)
 
 const createStoreWithFirebase = compose(
   reactReduxFirebase(firebase, rrfConfig),
@@ -33,8 +36,8 @@ const store = createStoreWithFirebase(
   rootReducer,
   initialState,
   compose(
-      reactReduxFirebase(firebase),
-      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-      
-  ));
+    reactReduxFirebase(firebase),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  )
+);
 export default store;
