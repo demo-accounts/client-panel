@@ -3,7 +3,7 @@ import "./App.css";
 import AppNavbar from "./Components/layout/AppNavbar";
 import Dashboard from "./Components/layout/Dashboard";
 import AddClient from './Components/clients/AddClient'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { hashRouter as Router, Route, Switch } from "react-router-dom";
 class App extends Component {
   render() {
     return (
