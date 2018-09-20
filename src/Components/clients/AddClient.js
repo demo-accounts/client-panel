@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { firestoreConnect} from "react-redux-firebase";
-import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import { firestoreConnect} from "react-redux-firebase"; // to get firestore to the props of this component
+import { Link } from 'react-router-dom' // for routing 
+import PropTypes from 'prop-types' // have types for props
+
 class AddClient extends Component {
   constructor(props) {
     super(props);
